@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>专利雷达｜技术机会助手</title>
+  <style>
+    :root{--ink:#172033;--muted:#64748b;--brand:#2563eb;--brand2:#0ea5e9;--bg:#f3f6fb;--card:#fff;--line:#e5eaf2;--green:#0f9f6e;--orange:#d97706}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+    .app{max-width:1180px;margin:auto;padding:22px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .brand{font-weight:800;font-size:22px;letter-spacing:.5px}.brand span{color:var(--brand)}.badge{font-size:12px;color:var(--brand);background:#e7f0ff;border-radius:99px;padding:4px 10px;margin-left:8px}
+    .hero{background:linear-gradient(120deg,#102a67,#1761ca 62%,#0ea5e9);border-radius:22px;padding:30px;color:#fff;box-shadow:0 16px 35px #1d4ed829}
+    h1{font-size:30px;line-height:1.25;margin:0 0 8px}.hero p{margin:0;color:#dbeafe}.search{display:flex;gap:10px;margin-top:22px}
+    input{flex:1;border:0;border-radius:12px;padding:15px 16px;font-size:15px;outline:0}.btn{border:0;border-radius:11px;padding:11px 17px;background:var(--brand);color:#fff;font-weight:700;cursor:pointer}.btn.light{background:#fff;color:var(--brand)}.btn.ghost{background:#eef4ff;color:var(--brand)}
+    .quick{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.quick button{border:1px solid #ffffff55;color:#fff;background:#ffffff16;border-radius:99px;padding:6px 11px;cursor:pointer}
+    .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin-top:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 18px #17203308}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.section-title h2{font-size:18px;margin:0}.muted{color:var(--muted)}.small{font-size:12px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:#eff6ff;color:#1d4ed8;border-radius:8px;padding:5px 9px}.tag.green{background:#eafaf3;color:var(--green)}.tag.orange{background:#fff7e8;color:var(--orange)}
+    .analysis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.metric{background:#f8fafc;border-radius:12px;padding:13px}.metric b{display:block;font-size:22px;margin-top:4px}
+    .route{border:1px solid var(--line);border-radius:12px;padding:13px;margin-bottom:10px}.route:last-child{margin-bottom:0}.route-head{display:flex;justify-content:space-between;font-weight:700}.bar{height:7px;background:#e8eef7;border-radius:9px;margin:9px 0 5px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand2));border-radius:9px}
+    .patent{border-top:1px solid var(--line);padding:13px 0}.patent:first-of-type{border-top:0}.patent h3{font-size:14px;margin:0 0 4px}.patent p{margin:0;color:var(--muted);font-size:12px}.patent .row{display:flex;justify-content:space-between;gap:8px;margin-top:7px}
+    .chart{height:150px;display:flex;align-items:end;gap:13px;padding:12px 8px 0;border-bottom:1px solid var(--line)}.col{flex:1;text-align:center;color:var(--muted);font-size:11px}.col i{display:block;background:linear-gradient(#60a5fa,#2563eb);border-radius:6px 6px 0 0;margin:0 auto 5px;width:34px}
+    .report{background:#f8fbff;border:1px solid #dbeafe;border-radius:12px;padding:15px}.report h3{margin:0 0 8px}.report li{margin:5px 0}.locked{position:relative;overflow:hidden}.blur{filter:blur(4px);user-select:none}.unlock{position:absolute;inset:0;background:#ffffffdb;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .expert{background:linear-gradient(135deg,#f7fbff,#f0fdf8);border:1px solid #dbeafe;border-radius:12px;padding:15px;margin-top:10px}.expert-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid #dbeafe}.expert-row:first-of-type{border-top:0}.rank{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#dbeafe;color:#1d4ed8;font-weight:800;font-size:12px}.expert-name{font-weight:700}.expert-meta{font-size:12px;color:var(--muted)}.consult{margin-top:12px;padding-top:12px;border-top:1px dashed #bfdbfe}.consult input{width:100%;border:1px solid var(--line);padding:10px;margin:7px 0;background:#fff}.consult-actions{display:flex;gap:8px;align-items:center}
+    .choices{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.choice{border:1px solid #bfdbfe;border-radius:99px;background:#fff;color:#2563eb;padding:6px 10px;cursor:pointer}.choice.active{background:#dbeafe;font-weight:700}.share-card{background:linear-gradient(135deg,#eff6ff,#ecfeff);border:1px solid #bae6fd;border-radius:13px;padding:14px;margin-top:12px}.share-card strong{font-size:16px}.bottom-actions{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:min(520px,calc(100% - 24px));display:flex;gap:8px;background:#ffffffee;border:1px solid var(--line);border-radius:15px;padding:8px;box-shadow:0 8px 26px #17203322;z-index:3}.bottom-actions .btn{flex:1}.loading{position:fixed;inset:0;background:#0f172acc;z-index:5;display:flex;align-items:center;justify-content:center}.loading-box{background:#fff;border-radius:16px;padding:25px;width:min(340px,calc(100% - 40px));text-align:center}.spinner{width:28px;height:28px;border:3px solid #dbeafe;border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px}@keyframes spin{to{transform:rotate(360deg)}}
+    .consult-pay{background:#fff;border:1px dashed #93c5fd;border-radius:10px;padding:12px;margin-top:9px}.consult-pay strong{display:block}.consult-pay ul{margin:7px 0;padding-left:18px}.consult-paid.hidden{display:none}
+    .unlock strong{font-size:17px}.price{font-size:24px;color:var(--brand);font-weight:800;margin:5px}.footer{color:var(--muted);font-size:12px;text-align:center;padding:22px 0}.hidden{display:none!important}
+    @media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.analysis{grid-template-columns:repeat(2,1fr)}h1{font-size:24px}.search{flex-direction:column}.top{align-items:flex-start;gap:8px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="top"><div class="brand"><span>专利雷达</span> · 技术机会助手 <em class="badge">在线体验</em></div><div><button class="btn ghost" onclick="showSaved()">我的项目 (<span id="savedCount">0</span>)</button> <button class="btn ghost" onclick="resetDemo()">重置案例</button></div></header>
+    <section class="hero">
+      <h1>从一个技术痛点，找到下一步</h1>
+      <p>面向创业者、产品经理和研发人员的专利情报初筛工具</p>
+      <div class="search"><input id="problem" value="想做一种适合老年人的居家跌倒检测设备，降低误报并保护隐私"><button class="btn light" onclick="analyze()">开始分析</button></div>
+      <div class="quick"><button onclick="fill('想做一种适合老年人的居家跌倒检测设备，降低误报并保护隐私')">老人跌倒检测</button><button onclick="fill('想做低成本的家庭储能电池低温保温方案')">低温储能</button><button onclick="fill('想做能提升室内机器人定位精度的传感器方案')">机器人定位</button></div>
+    </section>
+
+    <section id="result" class="hidden">
+      <div class="grid">
+        <div class="card">
+          <div class="section-title"><h2>① 痛点已拆解</h2><span class="tag green">可检索</span></div>
+          <p class="muted">系统从你的描述中提取了对象、场景、问题和目标，并扩展检索词。</p>
+          <div class="tags"><span class="tag">智能养老设备</span><span class="tag">居家场景</span><span class="tag">跌倒检测</span><span class="tag">隐私保护</span><span class="tag">降低误报</span></div>
+          <p class="small muted">推荐技术词：毫米波雷达 · 视觉识别 · 可穿戴传感器 · 多模态融合 · 边缘计算</p>
+        </div>
+        <div class="card"><div class="section-title"><h2>② 一页结论</h2><span class="tag orange">初筛结果</span></div>
+          <div class="analysis"><div class="metric">技术热度<b>高</b></div><div class="metric">竞争程度<b>中</b></div><div class="metric">专利族<b>86</b></div><div class="metric">近3年趋势<b>+28%</b></div></div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="section-title"><h2>技术路线图</h2><span class="muted small">按公开专利聚类</span></div>
+          <div class="route"><div class="route-head"><span>毫米波雷达检测</span><span class="tag green">增长快</span></div><div class="bar"><i style="width:78%"></i></div><span class="small muted">相关专利 26 · 近三年增长 41% · 竞争中</span></div>
+          <div class="route"><div class="route-head"><span>视觉识别检测</span><span class="tag orange">竞争高</span></div><div class="bar"><i style="width:92%"></i></div><span class="small muted">相关专利 43 · 近三年增长 19% · 申请人集中</span></div>
+          <div class="route"><div class="route-head"><span>可穿戴传感器</span><span class="tag">成熟</span></div><div class="bar"><i style="width:66%"></i></div><span class="small muted">相关专利 31 · 近三年增长 12% · 硬件成本敏感</span></div>
+          <div class="route"><div class="route-head"><span>多传感器融合 + 边缘计算</span><span class="tag green">可切入</span></div><div class="bar"><i style="width:54%"></i></div><span class="small muted">相关专利 18 · 近三年增长 36% · 竞争分散</span></div>
+        </div>
+        <div class="card"><div class="section-title"><h2>申请趋势</h2><span class="muted small">示例数据</span></div>
+          <div class="chart"><div class="col"><i style="height:45px"></i>2021<br>18</div><div class="col"><i style="height:62px"></i>2022<br>25</div><div class="col"><i style="height:75px"></i>2023<br>31</div><div class="col"><i style="height:96px"></i>2024<br>39</div><div class="col"><i style="height:119px"></i>2025<br>46</div></div>
+          <p class="small muted">公开申请量持续上升；毫米波和多传感器融合是增速较快的方向。</p>
+          <div class="tags"><span class="tag">养老照护</span><span class="tag">非接触式监测</span><span class="tag">隐私计算</span></div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="section-title"><h2>代表专利</h2><button class="btn ghost" onclick="toast('已加入项目空间')">收藏全部</button></div>
+          <article class="patent"><h3>一种基于毫米波雷达的居家跌倒检测方法及系统</h3><p>公开日 2024-06 · 申请人：某智能科技有限公司 · IPC：G08B 21/04</p><div class="row"><span class="tag green">公开</span><button class="btn ghost" onclick="toast('已打开官方来源（演示）')">查看来源</button></div></article>
+          <article class="patent"><h3>基于多模态感知的老年人异常行为识别装置</h3><p>公开日 2023-11 · 申请人：某大学 · IPC：G06V 40/20</p><div class="row"><span class="tag green">公开</span><button class="btn ghost" onclick="toast('已加入对比')">加入对比</button></div></article>
+          <article class="patent"><h3>一种保护隐私的室内跌倒监测边缘计算设备</h3><p>公开日 2025-02 · 申请人：某健康科技企业 · IPC：G06F 21/62</p><div class="row"><span class="tag green">公开</span><button class="btn ghost" onclick="toast('已打开专利详情（演示）')">查看详情</button></div></article>
+        </div>
+        <div class="card"><div class="section-title"><h2>机会与风险</h2><span class="tag green">建议行动</span></div>
+          <div class="report"><h3>可能的切入方向</h3><ul><li>多传感器融合降低误报，适配小户型居家环境。</li><li>本地边缘推理，减少视频上传，强化隐私卖点。</li><li>与社区养老、物业和护理机构做场景试点。</li></ul></div>
+          <div class="report" style="margin-top:10px"><h3>风险提示</h3><ul><li>视觉识别方向申请人较集中，需重点比对权利要求。</li><li>本页为公开数据初筛，不构成侵权或可专利性结论。</li></ul></div>
+          <div class="expert">
+            <div class="section-title" style="margin-bottom:6px"><h3>专家解读</h3><span class="tag">专利权人画像</span></div>
+            <p class="small muted">按本次检索主题的公开专利数量排序，展示机构与专家线索；不代表推荐、背书或法律意见。</p>
+            <div class="expert-row"><span class="rank">1</span><div><div class="expert-name">某智能健康科技企业</div><div class="expert-meta">知名企业 · 公开相关专利 12 件 · 毫米波/边缘计算</div></div></div>
+            <div class="expert-row"><span class="rank">2</span><div><div class="expert-name">某大学智能养老实验室</div><div class="expert-meta">高校院所 · 公开相关专利 9 件 · 多模态识别</div></div></div>
+            <div class="expert-row"><span class="rank">3</span><div><div class="expert-name">某科学院相关研究所</div><div class="expert-meta">科研院所 · 公开相关专利 7 件 · 雷达感知</div></div></div>
+            <div class="expert-row"><span class="rank">4</span><div><div class="expert-name">某养老设备集团</div><div class="expert-meta">知名企业 · 公开相关专利 6 件 · 场景落地</div></div></div>
+            <p class="small muted">专家/院士信息将在正式版依据官方任职、发明人和授权来源核验后展示，避免将发明人身份误作专家背书。</p>
+            <div class="consult"><strong>付费咨询</strong><div class="small muted">深度报告解锁后，可提交具体问题并申请专家、院所或企业合作线索。</div><div id="consultPay" class="consult-pay"><strong>解锁后可获得</strong><ul><li>基于本项目的专家/机构线索</li><li>技术路线和专利问题整理</li><li>咨询需求提交与人工跟进入口</li></ul><button class="btn" onclick="unlockConsult()">模拟支付并解锁咨询</button></div><div id="consultPaid" class="consult-paid hidden"><div class="small muted">选择您希望获得的帮助，再补充具体问题。</div><div class="choices"><button class="choice active" onclick="selectChoice(this)">技术路线选择</button><button class="choice" onclick="selectChoice(this)">专利风险初筛</button><button class="choice" onclick="selectChoice(this)">高校/院所合作</button><button class="choice" onclick="selectChoice(this)">寻找专家团队</button></div><input id="consultInput" placeholder="例如：想了解毫米波雷达路线的合作专家"><div class="consult-actions"><button class="btn" onclick="submitConsult()">提交留言</button><span id="consultState" class="small muted"></span></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="share-card"><strong>智能养老跌倒检测技术机会</strong><div class="small muted">热度：高 · 竞争：中 · 推荐路线：毫米波雷达 + 边缘计算</div><button class="btn ghost" style="margin-top:8px" onclick="shareResult()">生成分享卡片</button><span id="shareState" class="small muted" style="margin-left:8px"></span></div>
+      <div class="card locked" style="margin-top:18px"><div class="blur"><h2>深度机会报告</h2><p>完整申请人竞争矩阵、技术路线对比、代表专利权利要求摘要、项目评分和可持续监控建议。</p><p>建议优先验证：毫米波雷达 + 边缘计算的低误报方案；建议访谈对象：养老机构、社区物业、家庭照护者。</p></div><div class="unlock"><strong>已发现 4 条技术路线和 86 个相关专利族</strong><div class="price">9.9 元</div><span class="muted">解锁完整证据链与项目报告（演示）</span><button class="btn" style="margin-top:9px" onclick="unlock()">模拟解锁</button></div></div>
+    </section>
+    <div id="loading" class="loading hidden"><div class="loading-box"><div class="spinner"></div><strong id="loadingText">正在理解技术痛点</strong><p class="small muted">正在扩展关键词、匹配分类并聚类技术路线</p></div></div>
+    <div id="bottomActions" class="bottom-actions hidden"><button class="btn ghost" onclick="saveProject()">收藏方向</button><button class="btn" onclick="generateReport()">生成报告</button><button class="btn ghost" onclick="shareResult()">分享</button></div>
+    <footer class="footer">当前为在线体验版，使用演示样例数据；正式版本需接入合法授权/开放专利数据，并以官方法律状态为准。AI 分析不构成法律、投资或专利代理意见。</footer>
+  </main>
+  <script>
+    function fill(v){document.getElementById('problem').value=v}
+    function analyze(){const loading=document.getElementById('loading');const text=document.getElementById('loadingText');loading.classList.remove('hidden');const steps=['正在理解技术痛点','正在扩展检索关键词','正在匹配专利分类','正在聚类技术路线','正在生成机会判断'];let i=0;const timer=setInterval(()=>{text.textContent=steps[++i]||steps[steps.length-1];if(i>=steps.length-1){clearInterval(timer);setTimeout(()=>{loading.classList.add('hidden');document.getElementById('result').classList.remove('hidden');document.getElementById('bottomActions').classList.remove('hidden');document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'})},350)}},420)}
+    function resetDemo(){document.getElementById('result').classList.add('hidden');document.getElementById('bottomActions').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+    function unlock(){document.querySelector('.unlock').innerHTML='<strong style="color:#0f9f6e">已解锁（Demo）</strong><span class="muted">完整报告、导出和技术监控将在正式版提供。</span>';unlockConsult()}
+    function toast(t){alert(t)}
+    function selectChoice(el){document.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));el.classList.add('active')}
+    function getSaved(){return JSON.parse(localStorage.getItem('patentRadarProjects')||'[]')}
+    function saveProject(){const projects=getSaved();const problem=document.getElementById('problem').value.trim();if(!projects.some(x=>x.problem===problem)){projects.unshift({problem,date:new Date().toLocaleString('zh-CN')});localStorage.setItem('patentRadarProjects',JSON.stringify(projects));updateSavedCount();toast('已收藏到我的项目')}else{toast('该项目已收藏')}}
+    function updateSavedCount(){document.getElementById('savedCount').textContent=getSaved().length}
+    function showSaved(){const projects=getSaved();if(!projects.length){toast('还没有收藏项目，先完成一次技术分析吧');return}alert('我的项目\\n\\n'+projects.map((x,i)=>(i+1)+'. '+x.problem+'\\n   '+x.date).join('\\n'))}
+    function submitConsult(){const input=document.getElementById('consultInput');const state=document.getElementById('consultState');if(!input.value.trim()){state.textContent='请先填写咨询内容';state.style.color='#d97706';return}localStorage.setItem('patentRadarConsult',JSON.stringify({content:input.value.trim(),date:new Date().toLocaleString('zh-CN')}));state.textContent='已收到留言（MVP）';state.style.color='#0f9f6e';input.value=''}
+    function shareResult(){const text='智能养老跌倒检测技术机会｜热度：高｜竞争：中｜推荐路线：毫米波雷达 + 边缘计算';const state=document.getElementById('shareState');if(navigator.clipboard){navigator.clipboard.writeText(text).then(()=>{state.textContent='分享文案已复制';state.style.color='#0f9f6e'}).catch(()=>{state.textContent='分享卡片已生成';state.style.color='#0f9f6e'})}else{state.textContent='分享卡片已生成';state.style.color='#0f9f6e'}}
+    function generateReport(){const content=['专利雷达 MVP 技术机会报告','案例：'+document.getElementById('problem').value,'','结论：技术热度高，竞争程度中，近三年趋势 +28%。','推荐路线：毫米波雷达检测、多传感器融合 + 边缘计算。','机会：降低误报、本地边缘推理、社区养老场景试点。','风险：本报告基于公开样例数据，不构成侵权、可专利性或投资结论。'].join('\\n');const blob=new Blob([content],{type:'text/plain;charset=utf-8'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='专利雷达-技术机会报告.txt';link.click();URL.revokeObjectURL(link.href)}
+    function unlockConsult(){document.getElementById('consultPay').classList.add('hidden');document.getElementById('consultPaid').classList.remove('hidden');document.getElementById('consultState').textContent='咨询入口已解锁（Demo）';document.getElementById('consultState').style.color='#0f9f6e'}
+    updateSavedCount()
+  </script>
+</body>
+</html>
