@@ -25,12 +25,13 @@
     .choices{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.choice{border:1px solid #bfdbfe;border-radius:99px;background:#fff;color:#2563eb;padding:6px 10px;cursor:pointer}.choice.active{background:#dbeafe;font-weight:700}.share-card{background:linear-gradient(135deg,#eff6ff,#ecfeff);border:1px solid #bae6fd;border-radius:13px;padding:14px;margin-top:12px}.share-card strong{font-size:16px}.bottom-actions{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:min(520px,calc(100% - 24px));display:flex;gap:8px;background:#ffffffee;border:1px solid var(--line);border-radius:15px;padding:8px;box-shadow:0 8px 26px #17203322;z-index:3}.bottom-actions .btn{flex:1}.loading{position:fixed;inset:0;background:#0f172acc;z-index:5;display:flex;align-items:center;justify-content:center}.loading-box{background:#fff;border-radius:16px;padding:25px;width:min(340px,calc(100% - 40px));text-align:center}.spinner{width:28px;height:28px;border:3px solid #dbeafe;border-top-color:var(--brand);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 12px}@keyframes spin{to{transform:rotate(360deg)}}
     .consult-pay{background:#fff;border:1px dashed #93c5fd;border-radius:10px;padding:12px;margin-top:9px}.consult-pay strong{display:block}.consult-pay ul{margin:7px 0;padding-left:18px}.consult-paid.hidden{display:none}
     .unlock strong{font-size:17px}.price{font-size:24px;color:var(--brand);font-weight:800;margin:5px}.footer{color:var(--muted);font-size:12px;text-align:center;padding:22px 0}.hidden{display:none!important}
+    .site-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.site-links a{color:var(--brand);text-decoration:none;background:#eef4ff;border-radius:9px;padding:7px 11px;font-size:12px}
     @media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.analysis{grid-template-columns:repeat(2,1fr)}h1{font-size:24px}.search{flex-direction:column}.top{align-items:flex-start;gap:8px;flex-direction:column}}
   </style>
 </head>
 <body>
   <main class="app">
-    <header class="top"><div class="brand"><span>专利雷达</span> · 技术机会助手 <em class="badge">在线体验</em></div><div><button class="btn ghost" onclick="showSaved()">我的项目 (<span id="savedCount">0</span>)</button> <button class="btn ghost" onclick="resetDemo()">重置案例</button></div></header>
+    <header class="top"><div class="brand"><span>专利雷达</span> · 技术机会助手 <em class="badge">在线体验</em><div class="site-links"><a href="https://github.com/zarkberg/zarkberg.github.io/discussions" target="_blank" rel="noopener">产品反馈</a><a href="https://github.com/zarkberg/zarkberg.github.io/issues/new/choose" target="_blank" rel="noopener">报告问题</a></div></div><div><button class="btn ghost" onclick="showSaved()">我的项目 (<span id="savedCount">0</span>)</button> <button class="btn ghost" onclick="resetDemo()">重置案例</button></div></header>
     <section class="hero">
       <h1>从一个技术痛点，找到下一步</h1>
       <p>面向创业者、产品经理和研发人员的专利情报初筛工具</p>
