@@ -26,8 +26,7 @@
     .consult-pay{background:#fff;border:1px dashed #93c5fd;border-radius:10px;padding:12px;margin-top:9px}.consult-pay strong{display:block}.consult-pay ul{margin:7px 0;padding-left:18px}.consult-paid.hidden{display:none}
     .unlock strong{font-size:17px}.price{font-size:24px;color:var(--brand);font-weight:800;margin:5px}.footer{color:var(--muted);font-size:12px;text-align:center;padding:22px 0}.hidden{display:none!important}
     .site-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.site-links a{color:var(--brand);text-decoration:none;background:#eef4ff;border-radius:9px;padding:7px 11px;font-size:12px}
-    .market-mvp{margin-top:18px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border:1px solid #bfdbfe;border-radius:16px;padding:20px}.market-mvp h2{margin:0 0 6px;font-size:20px}.market-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:15px 0}.market-step{background:#fff;border:1px solid var(--line);border-radius:11px;padding:11px}.market-step b{display:block;color:var(--brand);margin-bottom:3px}.market-mvp .note{color:var(--muted);font-size:12px}.market-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-    @media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.analysis{grid-template-columns:repeat(2,1fr)}.market-flow{grid-template-columns:repeat(2,1fr)}h1{font-size:24px}.search{flex-direction:column}.top{align-items:flex-start;gap:8px;flex-direction:column}}
+    @media(max-width:760px){.app{padding:12px}.grid{grid-template-columns:1fr}.analysis{grid-template-columns:repeat(2,1fr)}h1{font-size:24px}.search{flex-direction:column}.top{align-items:flex-start;gap:8px;flex-direction:column}}
   </style>
 </head>
 <body>
@@ -38,19 +37,6 @@
       <p>面向创业者、产品经理和研发人员的专利情报初筛工具</p>
       <div class="search"><input id="problem" value="想做一种适合老年人的居家跌倒检测设备，降低误报并保护隐私"><button class="btn light" onclick="analyze()">开始分析</button></div>
       <div class="quick"><button onclick="fill('想做一种适合老年人的居家跌倒检测设备，降低误报并保护隐私')">老人跌倒检测</button><button onclick="fill('想做低成本的家庭储能电池低温保温方案')">低温储能</button><button onclick="fill('想做能提升室内机器人定位精度的传感器方案')">机器人定位</button></div>
-    </section>
-
-    <section class="market-mvp">
-      <h2>农产品商情匹配 MVP</h2>
-      <div class="muted">把用户主动带入的群消息或截图，转成可确认、可追溯的供需线索。</div>
-      <div class="market-flow">
-        <div class="market-step"><b>1. 主动导入</b><span class="note">粘贴、转发或截图识别</span></div>
-        <div class="market-step"><b>2. 用户确认</b><span class="note">品类、数量、地区和来源授权</span></div>
-        <div class="market-step"><b>3. 关系增强</b><span class="note">群主入口与脱敏来源标签</span></div>
-        <div class="market-step"><b>4. 双方联系</b><span class="note">对方确认后再交换联系方式</span></div>
-      </div>
-      <div class="note">当前为本地演示：不读取朋友圈、不监听微信群、不经手货款、不承诺成交。正式收费应明示为信息服务费，自愿打赏不能作为强制门槛。</div>
-      <div class="market-actions"><a class="btn" href="https://github.com/zarkberg/zarkberg.github.io/tree/main/eldercare-miniprogram" target="_blank" rel="noopener">下载小程序 MVP</a><a class="btn ghost" href="https://github.com/zarkberg/zarkberg.github.io/discussions" target="_blank" rel="noopener">提交试用反馈</a></div>
     </section>
 
     <section id="result" class="hidden">
