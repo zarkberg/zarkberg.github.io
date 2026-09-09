@@ -1,0 +1,9 @@
+{
+  "desc": "专利雷达 MVP sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

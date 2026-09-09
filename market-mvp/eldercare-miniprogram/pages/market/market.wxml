@@ -1,0 +1,73 @@
+<view class="market-page">
+  <view class="market-hero">
+    <view class="market-title">商情匹配</view>
+    <view class="market-subtitle">看到一条求购，点一下发布货源；看到一批货源，点一下提交需求。</view>
+  </view>
+
+  <view class="market-section">
+    <view class="mode-tabs">
+      <button class="{{mode === 'supply' ? 'mode active' : 'mode'}}" data-mode="supply" bindtap="changeMode">我有货</button>
+      <button class="{{mode === 'demand' ? 'mode active' : 'mode'}}" data-mode="demand" bindtap="changeMode">我要采购</button>
+    </view>
+    <view class="hint">先粘贴微信群中的商情，系统会提取品类、数量、地区和时间。</view>
+    <textarea class="message-input" value="{{message}}" bindinput="onMessageInput" placeholder="例如：收山东红富士苹果 10 吨，规格 80 以上，近期发货，价格面议" />
+    <button class="secondary-button" bindtap="parseMessage">识别群消息</button>
+    <view wx:if="{{parsed}}" class="parsed-box">
+      <view class="parsed-title">已识别，请确认</view>
+      <view class="field-row"><text>类型</text><text>{{form.type}}</text></view>
+      <view class="field-row"><text>品类</text><text>{{form.category}}</text></view>
+      <view class="field-row"><text>数量</text><text>{{form.quantity}}</text></view>
+      <view class="field-row"><text>地区</text><text>{{form.location}}</text></view>
+      <view class="field-row"><text>时间</text><text>{{form.time}}</text></view>
+    </view>
+  </view>
+
+  <view class="market-section">
+    <view class="section-title">30 秒填报</view>
+    <view class="form-row"><text class="label">农产品品类</text><input value="{{form.category}}" data-key="category" bindinput="onFieldInput" placeholder="如：苹果、脐橙" /></view>
+    <view class="form-row"><text class="label">数量</text><input value="{{form.quantity}}" data-key="quantity" bindinput="onFieldInput" placeholder="如：10 吨" /></view>
+    <view class="form-row"><text class="label">产地/交货地</text><input value="{{form.location}}" data-key="location" bindinput="onFieldInput" placeholder="如：山东烟台" /></view>
+    <view class="form-row"><text class="label">交货时间</text><input value="{{form.time}}" data-key="time" bindinput="onFieldInput" placeholder="如：近期、11 月" /></view>
+    <view class="form-row"><text class="label">联系方式</text><input value="{{form.contact}}" data-key="contact" bindinput="onFieldInput" placeholder="可选，匹配后再交换" /></view>
+    <button class="primary-button market-button" bindtap="publish">发布并查找匹配</button>
+  </view>
+
+  <view class="market-section">
+    <view class="section-title">来源与授权</view>
+    <picker mode="selector" range="{{sourceTypes}}" bindchange="onSourceTypeChange">
+      <view class="picker-row">来源类型：{{form.sourceType}} <text>选择 ›</text></view>
+    </picker>
+    <input class="source-input" value="{{form.sourceName}}" bindinput="onSourceNameInput" placeholder="可选：来源群/组织名称（公开展示会脱敏）" />
+    <checkbox-group bindchange="onAuthorizationChange">
+      <label class="consent"><checkbox value="authorized" checked="{{sourceAuthorized}}" />我确认有权提交这条信息，并已取得必要授权</label>
+    </checkbox-group>
+    <view class="hint">平台只记录授权来源类型和脱敏来源标签，不读取或监听朋友圈、微信群。</view>
+  </view>
+
+  <view class="market-section owner-section">
+    <view class="section-title">群主/组织入口</view>
+    <view class="hint">为你的群生成一个协作入口，成员主动提交后可按来源网络聚合商情。</view>
+    <button class="secondary-button" bindtap="createOwnerEntry">生成并复制群主入口</button>
+    <view wx:if="{{ownerInviteCode}}" class="invite-code">本次入口：{{ownerInviteCode}}</view>
+  </view>
+
+  <view wx:if="{{published}}" class="market-section">
+    <view class="success-title">已发布，发现 {{matches.length}} 条潜在线索</view>
+    <view class="share-card">
+      <view class="share-title">{{form.type === '供应' ? '供应' : '求购'}} {{form.category}}</view>
+      <view class="hint">{{form.quantity}} · {{form.location}} · {{form.time}}</view>
+      <button class="secondary-button" bindtap="copyShare">复制分享文案</button>
+    </view>
+    <view wx:for="{{matches}}" wx:key="id" class="match-card">
+      <view class="match-head"><text>{{item.title}}</text><text class="score">{{item.score}}% 匹配</text></view>
+      <view class="hint">{{item.detail}}</view>
+      <view class="trust-row">来源：已授权商情网络 · 身份和成交状态待确认</view>
+      <button class="contact-button" data-id="{{item.id}}" bindtap="requestContact">申请联系</button>
+    </view>
+  </view>
+
+  <view class="market-section">
+    <view class="section-title">使用提示</view>
+    <view class="hint">联系方式交换应由双方确认。正式版可提供透明的信息服务费；自愿打赏不能作为强制交换联系方式的前置条件，也不代表平台担保成交。</view>
+  </view>
+</view>

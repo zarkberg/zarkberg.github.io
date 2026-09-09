@@ -1,0 +1,221 @@
+page {
+  background: #f3f6fb;
+  color: #172033;
+  font-size: 28rpx;
+}
+
+button::after {
+  border: 0;
+}
+
+.page {
+  padding-bottom: 150rpx;
+}
+
+.hero {
+  padding: 42rpx 32rpx 38rpx;
+  color: #fff;
+  background: linear-gradient(120deg, #102a67, #1761ca 62%, #0ea5e9);
+}
+
+.brand {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 10rpx;
+  color: #dbeafe;
+  font-size: 25rpx;
+}
+
+.market-entry {
+  margin: 24rpx 0 0;
+  color: #dbeafe;
+  background: #ffffff1f;
+  border: 1rpx solid #ffffff66;
+  font-size: 25rpx;
+}
+
+.input-box {
+  display: flex;
+  margin-top: 28rpx;
+  padding: 24rpx;
+  background: #fff;
+  border-radius: 18rpx;
+}
+
+.problem-input {
+  flex: 1;
+  color: #172033;
+  font-size: 28rpx;
+}
+
+.primary-button {
+  margin: 22rpx 0 0;
+  color: #2563eb;
+  background: #fff;
+  font-weight: 700;
+}
+
+.quick-list {
+  display: flex;
+  gap: 14rpx;
+  margin-top: 18rpx;
+  white-space: nowrap;
+}
+
+.quick-item {
+  display: inline-block;
+  padding: 10rpx 18rpx;
+  color: #fff;
+  background: #ffffff1f;
+  border: 1rpx solid #ffffff55;
+  border-radius: 99rpx;
+  font-size: 23rpx;
+}
+
+.section {
+  margin: 24rpx;
+  padding: 28rpx;
+  background: #fff;
+  border: 1rpx solid #e5eaf2;
+  border-radius: 18rpx;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 24rpx;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 18rpx;
+}
+
+.tag {
+  padding: 8rpx 14rpx;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 10rpx;
+  font-size: 23rpx;
+}
+
+.tag-green {
+  color: #0f9f6e;
+  background: #eafaf3;
+}
+
+.metrics {
+  display: flex;
+  gap: 12rpx;
+  margin-top: 18rpx;
+}
+
+.metric {
+  flex: 1;
+  padding: 18rpx 12rpx;
+  background: #f8fafc;
+  border-radius: 12rpx;
+  text-align: center;
+  color: #64748b;
+  font-size: 22rpx;
+}
+
+.metric-value {
+  display: block;
+  margin-top: 8rpx;
+  color: #172033;
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.route {
+  margin-top: 18rpx;
+  padding: 18rpx;
+  border: 1rpx solid #e5eaf2;
+  border-radius: 14rpx;
+}
+
+.route-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.route-meta {
+  margin-top: 8rpx;
+  color: #64748b;
+  font-size: 23rpx;
+}
+
+.patent {
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #e5eaf2;
+}
+
+.patent:last-child {
+  border-bottom: 0;
+}
+
+.patent-title {
+  font-weight: 700;
+}
+
+.patent-meta {
+  margin-top: 8rpx;
+  color: #64748b;
+  font-size: 23rpx;
+}
+
+.locked {
+  padding: 24rpx;
+  background: #f8fbff;
+  border: 1rpx solid #bfdbfe;
+  border-radius: 14rpx;
+  text-align: center;
+}
+
+.price {
+  margin: 8rpx;
+  color: #2563eb;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.bottom-bar {
+  position: fixed;
+  right: 24rpx;
+  bottom: 24rpx;
+  left: 24rpx;
+  display: flex;
+  gap: 12rpx;
+  padding: 12rpx;
+  background: #ffffffee;
+  border: 1rpx solid #e5eaf2;
+  border-radius: 18rpx;
+  box-shadow: 0 8rpx 26rpx #17203322;
+}
+
+.bottom-button {
+  flex: 1;
+  margin: 0;
+  color: #2563eb;
+  background: #eef4ff;
+  font-size: 25rpx;
+}
+
+.bottom-button.primary {
+  color: #fff;
+  background: #2563eb;
+}
