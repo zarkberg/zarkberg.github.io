@@ -1,0 +1,144 @@
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Patent Radar mini-program QR code">
+  <defs>
+    <linearGradient id="bgGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f3fbf7"/>
+    </linearGradient>
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#eafaf6"/>
+      <stop offset="100%" stop-color="#d9f4ee"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#bgGlow)"/>
+
+  <g transform="translate(0 0)">
+    <!-- outer faded circle frame -->
+    <circle cx="500" cy="500" r="435" fill="none" stroke="#0b7d67" stroke-width="18" opacity="0.95"/>
+    <circle cx="500" cy="500" r="375" fill="none" stroke="#0b7d67" stroke-width="8" opacity="0.5" stroke-dasharray="2 18"/>
+
+    <!-- decorative ring pattern -->
+    <g fill="none" stroke="#0b7d67" stroke-width="7" opacity="0.8">
+      <circle cx="500" cy="500" r="318"/>
+      <circle cx="500" cy="500" r="290"/>
+      <circle cx="500" cy="500" r="262"/>
+      <circle cx="500" cy="500" r="234"/>
+    </g>
+
+    <!-- orbit dots -->
+    <g fill="#0b7d67" opacity="0.9">
+      <circle cx="500" cy="120" r="11"/>
+      <circle cx="500" cy="880" r="11"/>
+      <circle cx="120" cy="500" r="11"/>
+      <circle cx="880" cy="500" r="11"/>
+      <circle cx="210" cy="210" r="9"/>
+      <circle cx="790" cy="210" r="9"/>
+      <circle cx="210" cy="790" r="9"/>
+      <circle cx="790" cy="790" r="9"/>
+    </g>
+
+    <!-- subtle radiation strokes -->
+    <g stroke="#0b7d67" stroke-width="4" opacity="0.55" fill="none">
+      <path d="M500 65 L500 160"/>
+      <path d="M500 840 L500 935"/>
+      <path d="M65 500 L160 500"/>
+      <path d="M840 500 L935 500"/>
+      <path d="M200 200 L250 250"/>
+      <path d="M750 200 L700 250"/>
+      <path d="M200 800 L250 750"/>
+      <path d="M800 800 L750 750"/>
+    </g>
+
+    <!-- central body -->
+    <circle cx="500" cy="500" r="196" fill="#ffffff" stroke="#0b7d67" stroke-width="12"/>
+    <circle cx="500" cy="500" r="169" fill="url(#ringGlow)" opacity="0.9"/>
+
+    <!-- circular scanner/center motif -->
+    <circle cx="500" cy="500" r="124" fill="#ffffff" stroke="#0b7d67" stroke-width="8"/>
+    <circle cx="500" cy="500" r="92" fill="#ffffff"/>
+    <path d="M500 420 L500 580 M420 500 L580 500" stroke="#0b7d67" stroke-width="10" stroke-linecap="round"/>
+    <path d="M470 470 L530 530 M530 470 L470 530" stroke="#0b7d67" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- small ring around logo area -->
+    <circle cx="500" cy="500" r="156" fill="none" stroke="#0b7d67" stroke-width="4" stroke-dasharray="2 18" opacity="0.7"/>
+
+    <!-- QR-like pattern surrounding center -->
+    <g fill="#0b7d67">
+      <rect x="300" y="310" width="26" height="26" rx="4"/>
+      <rect x="348" y="310" width="18" height="18" rx="4"/>
+      <rect x="388" y="310" width="18" height="18" rx="4"/>
+      <rect x="594" y="310" width="18" height="18" rx="4"/>
+      <rect x="630" y="310" width="26" height="26" rx="4"/>
+
+      <rect x="300" y="350" width="18" height="18" rx="4"/>
+      <rect x="640" y="350" width="18" height="18" rx="4"/>
+
+      <rect x="300" y="390" width="26" height="26" rx="4"/>
+      <rect x="340" y="390" width="18" height="18" rx="4"/>
+      <rect x="620" y="390" width="18" height="18" rx="4"/>
+      <rect x="660" y="390" width="26" height="26" rx="4"/>
+
+      <rect x="300" y="590" width="26" height="26" rx="4"/>
+      <rect x="340" y="590" width="18" height="18" rx="4"/>
+      <rect x="620" y="590" width="18" height="18" rx="4"/>
+      <rect x="660" y="590" width="26" height="26" rx="4"/>
+
+      <rect x="300" y="630" width="18" height="18" rx="4"/>
+      <rect x="640" y="630" width="18" height="18" rx="4"/>
+
+      <rect x="300" y="670" width="26" height="26" rx="4"/>
+      <rect x="348" y="670" width="18" height="18" rx="4"/>
+      <rect x="388" y="670" width="18" height="18" rx="4"/>
+      <rect x="594" y="670" width="18" height="18" rx="4"/>
+      <rect x="630" y="670" width="26" height="26" rx="4"/>
+
+      <rect x="420" y="300" width="18" height="18" rx="4"/>
+      <rect x="450" y="300" width="18" height="18" rx="4"/>
+      <rect x="480" y="300" width="18" height="18" rx="4"/>
+      <rect x="510" y="300" width="18" height="18" rx="4"/>
+      <rect x="540" y="300" width="18" height="18" rx="4"/>
+      <rect x="570" y="300" width="18" height="18" rx="4"/>
+
+      <rect x="420" y="680" width="18" height="18" rx="4"/>
+      <rect x="450" y="680" width="18" height="18" rx="4"/>
+      <rect x="480" y="680" width="18" height="18" rx="4"/>
+      <rect x="510" y="680" width="18" height="18" rx="4"/>
+      <rect x="540" y="680" width="18" height="18" rx="4"/>
+      <rect x="570" y="680" width="18" height="18" rx="4"/>
+
+      <rect x="300" y="420" width="18" height="18" rx="4"/>
+      <rect x="300" y="450" width="18" height="18" rx="4"/>
+      <rect x="300" y="480" width="18" height="18" rx="4"/>
+      <rect x="300" y="510" width="18" height="18" rx="4"/>
+      <rect x="300" y="540" width="18" height="18" rx="4"/>
+
+      <rect x="680" y="420" width="18" height="18" rx="4"/>
+      <rect x="680" y="450" width="18" height="18" rx="4"/>
+      <rect x="680" y="480" width="18" height="18" rx="4"/>
+      <rect x="680" y="510" width="18" height="18" rx="4"/>
+      <rect x="680" y="540" width="18" height="18" rx="4"/>
+
+      <rect x="420" y="420" width="18" height="18" rx="4"/>
+      <rect x="450" y="420" width="18" height="18" rx="4"/>
+      <rect x="540" y="420" width="18" height="18" rx="4"/>
+      <rect x="570" y="420" width="18" height="18" rx="4"/>
+      <rect x="420" y="450" width="18" height="18" rx="4"/>
+      <rect x="570" y="450" width="18" height="18" rx="4"/>
+      <rect x="420" y="480" width="18" height="18" rx="4"/>
+      <rect x="570" y="480" width="18" height="18" rx="4"/>
+      <rect x="420" y="510" width="18" height="18" rx="4"/>
+      <rect x="570" y="510" width="18" height="18" rx="4"/>
+      <rect x="420" y="540" width="18" height="18" rx="4"/>
+      <rect x="570" y="540" width="18" height="18" rx="4"/>
+      <rect x="480" y="420" width="18" height="18" rx="4"/>
+      <rect x="510" y="420" width="18" height="18" rx="4"/>
+      <rect x="480" y="570" width="18" height="18" rx="4"/>
+      <rect x="510" y="570" width="18" height="18" rx="4"/>
+    </g>
+
+    <!-- bottom text -->
+    <g>
+      <text x="500" y="885" text-anchor="middle" font-size="42" font-weight="700" fill="#0b7d67" font-family="Arial, sans-serif" letter-spacing="1">丸石数据</text>
+    </g>
+  </g>
+</svg>
