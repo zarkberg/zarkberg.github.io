@@ -3,6 +3,7 @@
 **从一个技术痛点，找到下一步。**
 
 在线体验：<https://zarkberg.github.io/>
+端侧 AI 终端原型：<https://zarkberg.github.io/ai-terminal/>
 
 专利雷达面向创业者、产品经理、研发人员和专利申请人，将技术痛点转化为可理解的专利证据、技术路线和下一步行动建议。
 
